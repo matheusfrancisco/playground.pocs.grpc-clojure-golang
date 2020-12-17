@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: protojure:1.5.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/protojure/protojure/1.5.2/protojure-1.5.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: protojure/google.protobuf:0.9.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/protojure/google.protobuf/0.9.1/google.protobuf-0.9.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

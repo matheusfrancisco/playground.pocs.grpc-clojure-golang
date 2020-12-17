@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "grpc_poc.proto.translate";
+option java_outer_classname = "TranslateProto";
+
+package grpc_poc.proto.translation;
+
+message TranslationRequest {
+    string text = 1;
+    string target_language = 2;
+}
+
+message TranslationResponse {
+    string language = 1;
+    string src_text = 2;
+    string translation = 3;
+}
+
+service Translation {
+    rpc translate(TranslationRequest) returns (TranslationResponse);
+    //rpc translations(StreamingTranslationsRequest) returns (stream TranslationResponse);
+}
