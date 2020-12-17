@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "io.grpc.scraper";
+option java_outer_classname = "ScraperProto";
+
+package grpc_poc.proto.scraper;
+
+service Scraper {
+  rpc Authenticate(AuthRequest) returns (AuthResponse);
+  rpc Accounts(AccountsRequest) returns (AccountsResponse);
+}
+
+// AuthRequest contains credentials for performing an authentication call.
+message AuthRequest {
+  string account_type = 1;
+  string account_branch = 2;
+  string account_number = 3;
+  string oper = 4;
+  string password = 5;
+}
+
+message AuthResponse {
+  string token = 1;
+}
+
+message AccountsRequest{}
+
+// Accounts represents a bank account.
+message Account {
+  string branch = 1;
+  string number = 2;
+  string type = 3;
+  string sub_type = 4;
+}
+
+// AccountsRespost contains a list of accounts.
+message AccountsResponse {
+  repeated Account accounts = 1;
+}
+
+
+message DoneRequest{}
